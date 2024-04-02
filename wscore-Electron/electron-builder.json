@@ -1,0 +1,20 @@
+{
+    "productName": "wscore",
+    "win": {
+      "target": "nsis"
+    },
+    "mac":{
+      "target": "dmg"
+    },
+    "directories": {
+      "output": "dist"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerLanguages": "zh-CN",
+      "deleteAppDataOnUninstall": true
+    }
+}
+  

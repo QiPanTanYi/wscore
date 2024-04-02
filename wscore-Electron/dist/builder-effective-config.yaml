@@ -1,0 +1,16 @@
+directories:
+  output: dist
+  buildResources: build
+productName: WScore
+win:
+  target: nsis
+mac:
+  target: dmg
+nsis:
+  oneClick: false
+  perMachine: true
+  allowToChangeInstallationDirectory: true
+  installerLanguages: zh-CN
+  deleteAppDataOnUninstall: true
+files: []
+electronVersion: 26.0.0
