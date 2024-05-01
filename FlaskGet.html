@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>调用接口</title>
+    <link
+      rel="icon"
+      type="image/vnd.microsoft.icon"
+      href="http://192.168.1.101:8033/favicon.ico"
+    />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //------------------------------------------
+        $("#ShengTenButton").click(function () {
+          $.ajax({
+            url: "http://192.168.1.101:8033/ShengTen",
+            type: "GET",
+            success: function (response) {
+              $("#result").val(response);
+            },
+            error: function (xhr, status, error) {
+              $("#result").val("调用接口失败：" + error);
+            },
+          });
+        });
+        //------------------------------------------
+        $("#JueJinButton").click(function () {
+          $.ajax({
+            url: "http://192.168.1.101:8033/JueJin",
+            type: "GET",
+            success: function (response) {
+              $("#result").val(response);
+            },
+            error: function (xhr, status, error) {
+              $("#result").val("调用接口失败：" + error);
+            },
+          });
+        });
+        //------------------------------------------
+        $("#DailyButton").click(function () {
+          $.ajax({
+            url: "http://192.168.1.101:8033/Daily",
+            type: "GET",
+            success: function (response) {
+              $("#result").val(response);
+            },
+            error: function (xhr, status, error) {
+              $("#result").val("调用接口失败：" + error);
+            },
+          });
+        });
+        //------------------------------------------
+      });
+    </script>
+  </head>
+  <body>
+    <br />
+    <a href="https://qipantanyi.github.io/Favorites">收藏夹</a>
+    <br /><br />
+    <button id="ShengTenButton">昇腾签到</button>
+    <button id="JueJinButton">掘金签到</button>
+    <button id="DailyButton">上线经验</button>
+    <br /><br />
+    <textarea id="result" rows="10" cols="50"></textarea>
+  </body>
+</html>
